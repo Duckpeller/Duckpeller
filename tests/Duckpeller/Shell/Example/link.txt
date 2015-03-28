@@ -1,0 +1,5 @@
+docker run -d --name mysql mysql/mysql:latest && \
+export LINK_1="--link mysql:mysql"
+ && \
+docker run -d --name redis redis/redis:latest && \
+export LINK_2="--link redis:redis"

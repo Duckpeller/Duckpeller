@@ -1,0 +1,7 @@
+#!/bin/bash -lxe
+if [ -f ~/.bashrc ] ; then
+    . ~/.bashrc
+fi
+echo -e "\e[32m
+# ScriptStart 3 Steps
+\e[m"
