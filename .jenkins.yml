@@ -1,9 +1,9 @@
-container: aozora0000/jenkins-ci-node:latest
-links:
-    - name: db
-      container: mysql:5.6.22
+container: aozora0000/jenkins-ci-php:latest
 steps:
-    - name: npmインストール
-      code: npm install
-    - name: gulp起動
-      code: ./node_modules/.bin/gulp test
+    - name: composerインストール
+      code: composer install
+    - name: PHPUNITテスト開始
+      code: phpunit
+notify:
+    - service: idobata
+      token: $IDOBATA_TOKEN
